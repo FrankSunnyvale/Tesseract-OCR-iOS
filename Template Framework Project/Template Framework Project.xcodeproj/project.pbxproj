@@ -21,6 +21,7 @@
 		64DDA74E188FD7D10025590D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6400DDEA180C5DE000443362 /* Main.storyboard */; };
 		64DDA75B188FD9140025590D /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 64DDA75A188FD9140025590D /* tessdata */; };
 		64E40AB1180C6D4D00C36DDE /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E40AB0180C6D4D00C36DDE /* libstdc++.6.0.9.dylib */; };
+		F4E07D8519E25BC50010B70C /* failing_sample.png in Resources */ = {isa = PBXBuildFile; fileRef = F4E07D8419E25BC50010B70C /* failing_sample.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		6490748F198A5CD500D728CC /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		64DDA75A188FD9140025590D /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		64E40AB0180C6D4D00C36DDE /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		F4E07D8419E25BC50010B70C /* failing_sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = failing_sample.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		6400DDDF180C5DE000443362 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F4E07D8419E25BC50010B70C /* failing_sample.png */,
 				428615B61845F340005D5A2E /* image_sample.jpg */,
 				6400DDE0180C5DE000443362 /* Template Framework Project-Info.plist */,
 				6400DDE1180C5DE000443362 /* InfoPlist.strings */,
@@ -178,6 +181,7 @@
 				428615B71845F340005D5A2E /* image_sample.jpg in Resources */,
 				64DDA75B188FD9140025590D /* tessdata in Resources */,
 				6400DDE3180C5DE000443362 /* InfoPlist.strings in Resources */,
+				F4E07D8519E25BC50010B70C /* failing_sample.png in Resources */,
 				64DDA74E188FD7D10025590D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

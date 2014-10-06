@@ -67,6 +67,9 @@
     
     [tesseract setVariableValue:@"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ" forKey:@"tessedit_char_whitelist"]; //limit search
     
+    // needed for confidence by symbol to work correctly
+    [tesseract setVariableValue:@"T" forKey:@"save_blob_choices"];
+    
     [tesseract setImage:[img blackAndWhite]]; //image to check
     //[tesseract setRect:CGRectMake(20, 20, 100, 100)]; //optional: set the rectangle to recognize text in the image
     [tesseract recognize];
@@ -74,6 +77,11 @@
     NSString *recognizedText = [tesseract recognizedText];
     
     NSLog(@"%@", recognizedText);
+    
+    NSArray *confidences = [tesseract getConfidenceBySymbol];
+    for (NSDictionary *confidence in confidences) {
+        NSLog(@"%@: %@", confidence[@"text"], confidence[@"confidence"]);
+    }
     
     dispatch_async(dispatch_get_main_queue(), ^{
 		[self.activityIndicator stopAnimating];
@@ -118,7 +126,8 @@
 
 - (IBAction)recognizeSampleImage:(id)sender {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
-        [self recognizeImageWithTesseract:[UIImage imageNamed:@"image_sample.jpg"]];
+        //[self recognizeImageWithTesseract:[UIImage imageNamed:@"image_sample.jpg"]];
+        [self recognizeImageWithTesseract:[UIImage imageNamed:@"failing_sample.png"]];
 	});
 }
 
